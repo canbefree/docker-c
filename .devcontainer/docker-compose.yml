@@ -1,0 +1,22 @@
+version: "3"
+services:
+  # docker-go
+  docker-c:
+    container_name: docker-c
+    build:
+      context: ./
+    privileged: true
+    command: sleep infinity 
+    volumes: 
+      - "vdatac:/workspace"
+      - "~:/share"
+    networks:
+      - app_net
+
+networks:
+    app_net:
+        external: true
+
+volumes:
+    vdatago: 
+      name: vdatac
