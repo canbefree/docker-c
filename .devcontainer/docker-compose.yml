@@ -18,5 +18,5 @@ networks:
         external: true
 
 volumes:
-    vdatago: 
+    vdatac: 
       name: vdatac
